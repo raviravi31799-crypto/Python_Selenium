@@ -9,6 +9,7 @@ driver.get('https://automationexercise.com')
 wait=WebDriverWait(driver,15)
 home=wait.until(EC.visibility_of_element_located((By.XPATH,"//i[@class='fa fa-home']/parent::a")))
 assert home.is_displayed(),"Home page is not displayed"
+print("Home page is displayed")
 testcasepage=wait.until(EC.visibility_of_element_located((By.XPATH,"//div[@class='col-sm-12']/descendant::button[1]"))).click()
 word=driver.find_element(By.XPATH,"//h2[@class='title text-center']/child::b")
 assert word.is_displayed(),"Navigation is unsuccessful"
