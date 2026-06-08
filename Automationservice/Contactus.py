@@ -1,11 +1,15 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 driver=webdriver.Chrome()
 driver.maximize_window()
 driver.get("https://automationexercise.com/")
 driver.find_element(By.XPATH,"//i[@class='fa fa-envelope']/parent::a").click()
-assert driver.find_element(By.XPATH,"//div[@class='contact-form']/child::h2").is_displayed()
+wait=WebDriverWait(driver,10)
+form=wait.until(EC.visibility_of_element_located((By.XPATH,"//div[@class='contact-form']/child::h2")))
+assert form.is_displayed()
 print("Contactus Form is opened")
 driver.find_element(By.XPATH,"//input[@data-qa='name']").send_keys("John")
 driver.find_element(By.XPATH,"//input[@data-qa='email']").send_keys("John@gmail.com")
