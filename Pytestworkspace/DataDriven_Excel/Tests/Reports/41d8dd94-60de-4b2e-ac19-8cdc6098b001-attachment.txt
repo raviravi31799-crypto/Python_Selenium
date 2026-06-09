@@ -1,0 +1,5 @@
+[32mINFO    [0m AutomationLogger:test_Login.py:14 Instantiating browser
+[32mINFO    [0m AutomationLogger:test_Login.py:18 Application launched successfully
+[32mINFO    [0m AutomationLogger:test_Login.py:21 Entered username
+[32mINFO    [0m AutomationLogger:test_Login.py:23 Entered password
+[32mINFO    [0m AutomationLogger:test_Login.py:27 Login successful

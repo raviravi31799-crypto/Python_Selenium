@@ -1,0 +1,5 @@
+2026-06-09 17:28:50 - INFO - Instantiating browser
+2026-06-09 17:28:53 - INFO - Application launched successfully
+2026-06-09 17:28:53 - INFO - Entered username
+2026-06-09 17:28:53 - INFO - Entered password
+2026-06-09 17:28:54 - INFO - Login successful
