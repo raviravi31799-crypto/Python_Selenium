@@ -17,14 +17,13 @@ class Testlogin:
         self.driver.get("https://tutorialsninja.com/demo/")
         self.log.info("Application launched successfully")
         self.driver.find_element(By.XPATH,"//span[text()='My Account']").click()
-        self.driver.find_element(By.XPATH,"//ul[@class='dropdown-menu dropdown-menu-right']//a[text()='Login']").click()
+        self.driver.find_element(By.XPATH,"//ul[@class='dropdown-menu.dropdown-menu-right']//a[text()='Login']").click()
         self.driver.find_element(By.XPATH,"//input[@id='input-email']").send_keys(username)
         self.log.info("Entered username")
         self.driver.find_element(By.XPATH,"//input[@id='input-password']").send_keys(password)
         self.log.info("Entered password")
         self.driver.find_element(By.XPATH,"//input[@value='Login']").click()
-        # logout=self.driver.find_element(By.ID,"logout2")
-        # assert logout.is_displayed(),"Logout failed"
+       
         self.log.info("Login successful")
         self.driver.quit()
     
