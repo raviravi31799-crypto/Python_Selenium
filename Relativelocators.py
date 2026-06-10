@@ -8,7 +8,7 @@ from selenium.webdriver.support import expected_conditions as EC
 driver=webdriver.Chrome()
 driver.maximize_window()
 driver.get("https://tutorialsninja.com/demo/")
-wait=WebDriverWait(driver,10)
+wait=WebDriverWait(driver,20)
 phone=wait.until(EC.visibility_of_element_located((By.XPATH,"//i[contains(@class,'fa-phone')]")))
 account=driver.find_element(locate_with(By.XPATH,"//span[text()='My Account']").to_right_of(phone))
 account.click()
