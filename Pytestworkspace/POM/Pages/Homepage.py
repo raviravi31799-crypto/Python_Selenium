@@ -19,7 +19,7 @@ class Homepage:
      
     log=Logcreator.log_generator() 
     def click_account(self):   
-        acc=WebDriverWait(self.driver,10).until(EC.visibility_of_element_located((By.XPATH,self.account)))
+        acc=WebDriverWait(self.driver,10).until(EC.element_to_be_clickable((By.XPATH,self.account)))
         acc.click()
     def click_login(self):
           
