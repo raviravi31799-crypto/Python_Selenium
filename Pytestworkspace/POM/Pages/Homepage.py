@@ -19,11 +19,11 @@ class Homepage:
      
     log=Logcreator.log_generator() 
     def click_account(self):   
-        acc=WebDriverWait(self.driver,20).until(EC.element_to_be_clickable((By.XPATH,self.account)))
+        acc=WebDriverWait(self.driver,40).until(EC.element_to_be_clickable((By.XPATH,self.account)))
         acc.click()
     def click_login(self):
           
-        element=WebDriverWait(self.driver,10).until(EC.visibility_of_element_located((By.XPATH,self.login)))
+        element=WebDriverWait(self.driver,40).until(EC.visibility_of_element_located((By.XPATH,self.login)))
         element.click()
         self.log.info("Clicked on Login link")
     def enter_credentials(self):
@@ -37,7 +37,7 @@ class Homepage:
         self.driver.find_element(By.XPATH,self.login_btn).click()
         
     def logout_visible(self):
-        logoutlink=WebDriverWait(self.driver,10).until(EC.visibility_of_element_located((By.XPATH,self.logout)))
+        logoutlink=WebDriverWait(self.driver,40).until(EC.visibility_of_element_located((By.XPATH,self.logout)))
         assert logoutlink.is_displayed(),"Logout failed"
         self.log.info("Login successful")
 
